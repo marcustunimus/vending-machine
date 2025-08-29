@@ -2,8 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use Database\Seeders\CoinStackSeeder;
+use Database\Seeders\CurrencySeeder;
+use Database\Seeders\ItemSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,11 +16,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        (new CurrencySeeder())->run();
+        (new VendingMachineSeeder())->run();
+        (new CoinStackSeeder())->run();
+        (new ItemSeeder())->run();
     }
 }

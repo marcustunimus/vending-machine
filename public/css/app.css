@@ -1,0 +1,76 @@
+.manage-flex-container {
+    display:flex; 
+    justify-content: space-evenly; 
+    margin: 10px;
+}
+
+.manage-flex-items {
+    width: 150px;
+    text-align: center;
+}
+
+.manage-flex-button {
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    background-color: lightgray;
+}
+
+
+
+.view-flex-container {
+    display:flex; 
+    justify-content: space-evenly; 
+    margin: 10px;
+}
+
+
+
+.select-vending-machine-button {
+    width: 200px; 
+    height: 200px; 
+    margin: 10px; 
+    font-weight: bold; 
+    font-size: 25px; 
+    cursor: pointer;
+}
+
+
+
+.return-change-button-container {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.return-change-button {
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+.purchase-item-button {
+    width: 100px; 
+    height: 100px; 
+    margin: 5px; 
+    font-weight: bold; 
+    font-size: 15px; 
+    cursor: pointer;
+}
+
+
+
+.insert-coin-button {
+    width: 50px; 
+    height: 50px; 
+    margin: 5px; 
+    font-weight: bold; 
+    font-size: 15px; 
+    cursor: pointer; 
+    border-radius: 50%;
+    padding: 0px;
+}
