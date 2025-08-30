@@ -15,7 +15,7 @@ class CheckAdminAPIKey
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $passkey = $request->get("ADMIN_API_KEY");
+        $passkey = $request->get("ADMIN_API_KEY", "AdminApiKey");
 
         if ($passkey === env("ADMIN_API_KEY")) {
             return $next($request);

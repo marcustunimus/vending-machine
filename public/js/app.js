@@ -18,7 +18,7 @@ function insertCoin(id, value, currencyCode) {
     let balanceAmount = document.getElementById("balance-amount");
 
     fetchRequest(
-        "POST", "/api/vending-machine/" + id + "/balance/coins" + "?key=" + key.innerHTML + "&value=" + value + "&currencyCode=" + currencyCode
+        "POST", "/api/vending-machines/" + id + "/balance/coins" + "?key=" + key.innerHTML + "&value=" + value + "&currencyCode=" + currencyCode
     ).then(function (data) {
         console.log(data);
 
@@ -37,7 +37,7 @@ function purchaseItem(vendingMachineId, itemId) {
     let balanceAmount = document.getElementById("balance-amount");
 
     fetchRequest(
-        "POST", "/api/vending-machine/" + vendingMachineId + "/balance/purchaseItems/" + itemId + "?key=" + key.innerHTML
+        "POST", "/api/vending-machines/" + vendingMachineId + "/balance/purchaseItems/" + itemId + "?key=" + key.innerHTML
     ).then(function (data) {
         console.log(data);
 
@@ -56,7 +56,7 @@ function returnBalance(id) {
     let balanceAmount = document.getElementById("balance-amount");
 
     fetchRequest(
-        "POST", "/api/vending-machine/" + id + "/balance/return" + "?key=" + key.innerHTML
+        "POST", "/api/vending-machines/" + id + "/balance/return" + "?key=" + key.innerHTML
     ).then(function (data) {
         console.log(data);
 

@@ -30,16 +30,16 @@ Route::get("/vending-machines/{vendingMachine}", [VendingMachineController::clas
 
 // Vending Machines Actions
 
-Route::post("/vending-machine/{vendingMachine}/balance/coins", [VendingMachineController::class, "insertCoin"])
+Route::post("/vending-machines/{vendingMachine}/balance/coins", [VendingMachineController::class, "insertCoin"])
     ->where("vendingMachine", '^[0-9]+$')
     ->name('vending-machines.insert-coin');
 
-Route::post("/vending-machine/{vendingMachine}/balance/purchaseItems/{item}", [VendingMachineController::class, "purchaseItem"])
+Route::post("/vending-machines/{vendingMachine}/balance/purchaseItems/{item}", [VendingMachineController::class, "purchaseItem"])
     ->where("vendingMachine", '^[0-9]+$')
     ->where("item", '^[0-9]+$')
     ->name('vending-machines.purchase-item');
 
-Route::post("/vending-machine/{vendingMachine}/balance/return", [VendingMachineController::class, "returnBalance"])
+Route::post("/vending-machines/{vendingMachine}/balance/return", [VendingMachineController::class, "returnBalance"])
     ->where("vendingMachine", '^[0-9]+$')
     ->name('vending-machines.return-balance');
 
